@@ -18,7 +18,7 @@ function check_math(s) {
 				console.log(`${line.trim()} - не верно!`)
 			}
 		} catch(e) {
-			console.log(`${line.trim()} - ЧТО это?`)
+			console.log(`${line.trim()} - не решен? Или что это? я не понимаю...`)
 		}
 	}
 	return res;
