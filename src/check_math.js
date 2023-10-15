@@ -20,7 +20,7 @@ function check_math(s) {
 				console.log(`${lineIndex}>   ${line.trim()} - не верно!`)
 			}
 		} catch(e) {
-			console.log(`${lineIndex}>   ${line.trim()} - ЧТО это?`)
+			console.log(`${lineIndex}>   ${line.trim()} - не решен? Или что это? я не понимаю...`)
 		}
 	}
 	return res;
