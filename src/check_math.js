@@ -3,7 +3,9 @@
 function check_math(s) {
 	let res = {correct:0, incorrect:0};
 	const lines = s.split("\n");
+	let lineIndex = 0;
 	for(const line of lines) {
+		lineIndex++;
 		if(!line.trim().length) {
 			continue;
 		}
@@ -12,13 +14,13 @@ function check_math(s) {
 			const r = eval(eq);
 			if(r) {
 				res.correct++;
-				console.log(`${line.trim()} - ок`)
+				console.log(`${lineIndex}>   ${line.trim()} - ок`)
 			} else {
 				res.incorrect++;
-				console.log(`${line.trim()} - не верно!`)
+				console.log(`${lineIndex}>   ${line.trim()} - не верно!`)
 			}
 		} catch(e) {
-			console.log(`${line.trim()} - ЧТО это?`)
+			console.log(`${lineIndex}>   ${line.trim()} - ЧТО это?`)
 		}
 	}
 	return res;
